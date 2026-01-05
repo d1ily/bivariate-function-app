@@ -41,4 +41,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown("""
 ### Explanation
 - This surface represents a **bivariate function** where two inputs (x, y)
-  determine on
+  determine one output (z).
+- Adjusting the sliders allows users to explore how the function behaves
+  over different domains.
+""")
