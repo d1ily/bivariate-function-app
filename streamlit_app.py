@@ -4,14 +4,14 @@ import plotly.graph_objects as go
 
 st.title("Interactive Visualization of Bivariate Functions")
 
-st.markdown(
+st.write(
     "This interactive application helps visualize **bivariate functions** "
     "by allowing users to adjust parameters and observe changes in 3D surfaces."
 )
 
 function_type = st.selectbox(
     "Choose a bivariate function:",
-    ["f(x, y) = x² + y²", "f(x, y) = x²y − y³"]
+    ["f(x, y) = x^2 + y^2", "f(x, y) = x^2y - y^3"]
 )
 
 x_range = st.slider("Range of x and y", 1, 5, 3)
@@ -21,7 +21,7 @@ x = np.linspace(-x_range, x_range, resolution)
 y = np.linspace(-x_range, x_range, resolution)
 X, Y = np.meshgrid(x, y)
 
-if function_type == "f(x, y) = x² + y²":
+if function_type == "f(x, y) = x^2 + y^2":
     Z = X**2 + Y**2
 else:
     Z = X**2 * Y - Y**3
@@ -38,8 +38,8 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
-st.markdown(
-    "### Explanation\n"
+st.write("### Explanation")
+st.write(
     "- This surface represents a **bivariate function** where two inputs (x, y) "
     "determine one output (z).\n"
     "- Adjusting the sliders allows users to explore how the function behaves "
