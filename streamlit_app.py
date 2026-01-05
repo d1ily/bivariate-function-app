@@ -33,4 +33,15 @@ fig.update_layout(
         yaxis_title="y",
         zaxis_title="z"
     ),
-    margi
+    margin=dict(l=0, r=0, b=0, t=40)
+)
+
+st.plotly_chart(fig, use_container_width=True)
+
+st.markdown(
+    "### Explanation\n"
+    "- This surface represents a **bivariate function** where two inputs (x, y) "
+    "determine one output (z).\n"
+    "- Adjusting the sliders allows users to explore how the function behaves "
+    "over different domains."
+)
