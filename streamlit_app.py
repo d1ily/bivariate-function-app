@@ -4,10 +4,10 @@ import plotly.graph_objects as go
 
 st.title("Interactive Visualization of Bivariate Functions")
 
-st.markdown("""
-This interactive application helps visualize **bivariate functions**
-by allowing users to adjust parameters and observe changes in 3D surfaces.
-""")
+st.markdown(
+    "This interactive application helps visualize **bivariate functions** "
+    "by allowing users to adjust parameters and observe changes in 3D surfaces."
+)
 
 function_type = st.selectbox(
     "Choose a bivariate function:",
@@ -33,15 +33,4 @@ fig.update_layout(
         yaxis_title="y",
         zaxis_title="z"
     ),
-    margin=dict(l=0, r=0, b=0, t=40)
-)
-
-st.plotly_chart(fig, use_container_width=True)
-
-st.markdown("""
-### Explanation
-- This surface represents a **bivariate function** where two inputs (x, y)
-  determine one output (z).
-- Adjusting the sliders allows users to explore how the function behaves
-  over different domains.
-""")
+    margi
